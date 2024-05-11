@@ -293,6 +293,7 @@ require('lazy').setup({
       vim.g.slime_target = 'tmux'
     end,
   },
+  'JuliaEditorSupport/julia-vim',
 
   -- NOTE: Plugins can also be configured to run lua code when they are loaded.
   --
