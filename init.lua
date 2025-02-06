@@ -286,14 +286,14 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader>r', slimux.send_paragraph_text, { desc = 'Send paragraph under cursor to configured tmux pane' })
     end,
   },
-  { -- makes scrolling smoother
-    'declancm/cinnamon.nvim',
-    config = function()
-      require('cinnamon').setup {
-        extra_keymaps = true,
-      }
-    end,
-  },
+  -- { -- makes scrolling smoother
+  --   'declancm/cinnamon.nvim',
+  --   config = function()
+  --     require('cinnamon').setup {
+  --       extra_keymaps = true,
+  --     }
+  --   end,
+  -- },
   {
     'windwp/nvim-autopairs',
     config = function()
@@ -461,7 +461,13 @@ require('lazy').setup({
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
-
+  -- lua with lazy.nvim
+  {
+    'max397574/better-escape.nvim',
+    config = function()
+      require('better_escape').setup()
+    end,
+  },
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
